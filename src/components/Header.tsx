@@ -1,12 +1,14 @@
 import LinkTopicList from "./LinkTopicList"
-import { SunIcon, MoonIcon } from "../assets/Icons"
-import useThemeColor from "../hooks/useThemeColor"
 import useLanguage from "../hooks/useLanguage";
-import ImgFlag from "./ImgFlag";
+import BtnActions from "./BtnActions";
+import { TypeChangeModalState } from "../types";
 
-export default function Header() {
-  const [theme, handleChangeTheme] = useThemeColor()
-  const { t, lang, setLanguage } = useLanguage()
+export default function Header({ changeModal }: TypeChangeModalState) {
+  const { t } = useLanguage()
+
+  function openModal() {
+    changeModal(true)
+  }
 
   return (
     <header className="w-full flex items-center mb-12 justify-between px-4 py-6">
@@ -14,17 +16,19 @@ export default function Header() {
         <h5 className="dark:text-white">Filipe Dev</h5>
         {/*hover que aparece os icones com links das minhas redes sociais e estilizar esse texto */}
       </div>
-      <ul className="flex items-center justify-between gap-8">
+      <ul className="hidden items-center justify-between gap-8 md:flex">
         <LinkTopicList text={t('header.home')} linkPath="/" />
         <LinkTopicList text={t('header.projects')} linkPath="/projects" />
         <LinkTopicList text={t('header.about')} linkPath="/about" />
       </ul>
-      <div className="flex items-center gap-4">
-        <button onClick={handleChangeTheme} className="border-none outline-none relative cursor-pointer">
-          {theme === 'light' ? <SunIcon /> : <MoonIcon className="dark:text-white" />}
-        </button>
-        <button onClick={setLanguage} className="border-none outline-none relative cursor-pointer">
-          {lang === 'en' ? <ImgFlag lang="en" /> : <ImgFlag lang="pt" />}
+      <div className="hidden items-center gap-4 md:flex">
+        <BtnActions />
+      </div>
+      <div>
+        <button className="flex flex-col md:hidden gap-1 border-none outline-none" onClick={openModal}>
+          <li className="w-6 h-[.12rem] outline-none bg-black dark:bg-white border-none rounded-4xl block"></li>
+          <li className="w-6 h-[.12rem] outline-none bg-black dark:bg-white border-none rounded-4xl block"></li>
+          <li className="w-6 h-[.12rem] outline-none bg-black dark:bg-white border-none rounded-4xl block"></li>
         </button>
       </div>
     </header>

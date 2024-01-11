@@ -1,6 +1,6 @@
 {
   "translation": {
-    "header":{
+    "header": {
       "home": "Home",
       "projects": "Projetos",
       "about": "Sobre"
@@ -20,7 +20,25 @@
       "title": "Projetos"
     },
     "about": {
-      "title": "Sobre Mim"
+      "title": "Sobre Mim",
+      "text": {
+        "one": "Sou Filipe Santos, Frontend Developer, Criador de Conteúdo e apaixonado por Ciência da Computação. Possuo diversas certificações em FrontEnd e estou concluindo bacharelado em Engenharia da Computação. Adoro criar soluções simples para problemas complexos. Por conta disso atuo com desenvolvimento de serviços Frontend, Mobile ou Backend.",
+        "two": "Como engenheiro de software com mais de 2 anos de experiência, tenho sólida experiência em React e TypeScript seguindo as melhores práticas como SOLID e Clean Architecture para garantir que meu código seja bem organizado e fácil de entender."
+      },
+      "hire": "Contrate Me",
+      "contact": "Entre em Contato",
+      "letsWork": "Vamos trabalhar juntos para criar o futuro. Minhas habilidades:",
+      "listTopics": {
+        "one": "Desenvolvedor Fullstack com habilidades frontend mais fortes",
+        "two": "Experiência com React e experiência recente com Next",
+        "three": "1 ano de experiência com Vue 3, Quasar e outros Vue Framerworks (como Pinia)",
+        "four": "Forte conhecimento em Javascript e TypeScript",
+        "five": "Conhecimento sobre Testes(Jest, Vitest e TDD)",
+        "six": "Tailwind CSS e Scss",
+        "seven": "Falo Português e Inglês",
+        "eight": "Possuo Conhecimento sobre Node.js e alguns bancos de dados (Mongodb e MySQL)",
+        "none": "6 meses de experiência com React Native"
+      }
     }
   }
 }

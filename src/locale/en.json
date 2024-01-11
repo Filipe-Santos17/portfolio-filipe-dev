@@ -20,7 +20,25 @@
       "title": "Projects"
     },
     "about": {
-      "title": "About Me"
+      "title": "About Me",
+      "text": {
+        "one":" I'm Filipe Santos, Frontend Developer, Content Creator and passionate about Computer Science. I have 3 different certifications in FrontEnd/React and completing a Bachelor's Degree in Computer Engineering from Unijorge. I love creating simple solutions to complex problems. Because of this I work with development of Frontend, Mobile or Backend services.",
+        "two":"As a software engineer with over 2 years of experience, I have a strong background in React and TypeScript following the best practices like SOLID and Clean Architecture to ensure that my code is well-organized and easy to understand."
+      },
+      "hire": "Hire Me",
+      "contact": "Contact Me",
+      "letsWork": "Let's work togheter to create the future. My Skills:",
+      "listTopics": {
+        "one": "Fullstack developer with stronger frontend skills",
+        "two": "Experience with React and recent experience with Next",
+        "three": "1 Year of experience with Vue 3, Quasar and others Vue Framerworks(like Pinia)",
+        "four": "Strong knowledge of Javascript and TypeScript",
+        "five": "Knowledge about Tests(Jest, Vitest and TDD)",
+        "six": "Tailwind CSS and Scss",
+        "seven": "Speak Portuguse and English",
+        "eight": "Knowledge about Node.js and somes databases(Mongodb and MySQL)",
+        "none": "6 months of experience with React Native"
+      }
     }
   }
 }

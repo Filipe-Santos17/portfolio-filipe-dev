@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        darkNeutral: '#121212'
+        darkNeutral: '#121212',
+        modalBg:'#20212C30',
       }
     },
   },
