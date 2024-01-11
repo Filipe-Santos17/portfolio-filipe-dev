@@ -1,4 +1,4 @@
-import { TypeChangeModalState } from "@/types";
+import { TypeChangeModalState } from "../types";
 import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
 
