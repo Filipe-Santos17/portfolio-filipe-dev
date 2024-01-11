@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MouseEvent } from "react";
+// import { MouseEvent, MouseEventHandler } from "react";
 import { TypeChangeModalState } from "@/types";
 import useLanguage from "../hooks/useLanguage";
 import BtnActions from "./BtnActions";
@@ -20,7 +20,7 @@ const LiLink = ({ text, linkTo, action }: TypeLinkProps) => (
 export default function Modal({ changeModal }: TypeChangeModalState) {
   const { t } = useLanguage()
 
-  function handleClickOutside(e: MouseEvent<HTMLDivElement, MouseEvent>): void {
+  function handleClickOutside(e: any): void {
     if (e.target === e.currentTarget) {
       changeModal(false)
     }
