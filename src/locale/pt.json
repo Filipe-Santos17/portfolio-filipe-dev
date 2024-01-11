@@ -1,5 +1,26 @@
 {
   "translation": {
-    "text": "texto"
+    "header":{
+      "home": "Home",
+      "projects": "Projetos",
+      "about": "Sobre"
+    },
+    "home": {
+      "hello": "Olá, eu sou Filipe Marques",
+      "jobTitle": "Desenvolvedor Full-stack, Criador de Contéudo e apaixonado por Ciência da Computação.",
+      "interest": "Você deve estar interresado em:",
+      "interestList": {
+        "one": "Me Contratar",
+        "two": "Entrar em Contato",
+        "three": "Meus Projetos",
+        "four": "Sobre Mim"
+      }
+    },
+    "projects": {
+      "title": "Projetos"
+    },
+    "about": {
+      "title": "Sobre Mim"
+    }
   }
 }

@@ -1,5 +1,26 @@
 {
   "translation": {
-    "text": "text my name"
+    "header": {
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About"
+    },
+    "home": {
+      "hello": "Hi, I'm Filipe Marques",
+      "jobTitle": "Full-stack developer, Content Creator and passionate about Computer Science.",
+      "interest": "You may be interested in:",
+      "interestList": {
+        "one": "Hire Me",
+        "two": "Contact Me",
+        "three": "My Projects",
+        "four": "About Me"
+      }
+    },
+    "projects": {
+      "title": "Projects"
+    },
+    "about": {
+      "title": "About Me"
+    }
   }
 }

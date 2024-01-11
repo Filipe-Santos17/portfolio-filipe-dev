@@ -4,8 +4,13 @@ export default {
     "./src/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        darkNeutral: '#121212'
+      }
+    },
   },
   plugins: [],
 }

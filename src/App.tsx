@@ -1,21 +1,19 @@
-import { useState } from "react"
-import { useTranslation } from "react-i18next"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Container from "./layout/Container"
+import Home from "./pages/Home"
+import Projects from "./pages/Projects"
+import About from "./pages/About"
 
 export default function App() {
-  const { t, i18n } = useTranslation()
-
-  const [lang, setLang] = useState(i18n.language)
-
-  function setLanguage() {
-    const language = lang === 'en' ? 'pt' : 'en'
-    i18n.changeLanguage(language)
-    setLang(language)
-  }
-
   return (
-    <>
-      <div className="text-3xl font-bold">{t('text')}</div>
-      <button onClick={setLanguage}>change</button>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Container/>}>
+          <Route Component={Home} index/>
+          <Route Component={Projects} path="projects/"/>
+          <Route Component={About} path="about/"/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
