@@ -1,4 +1,3 @@
-import ProfilePhoto from "../assets/profile-photo.jpeg"
 import useLanguage from "../hooks/useLanguage"
 import Title from "../components/Title"
 import LinkTopicList from "../components/LinkTopicList"
@@ -27,7 +26,7 @@ export default function Home() {
         </section>
       </div>
       <div className="w-full h-full md:w-96 md:h-96">
-        <img src={ProfilePhoto} alt="profile photo" className="w-full h-full rounded-xl" />
+        <img src="./profile-photo.jpeg" alt="profile photo" className="w-full h-full rounded-xl" />
       </div>
     </section>
   )

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 // import { MouseEvent, MouseEventHandler } from "react";
-import { TypeChangeModalState } from "@/types";
+import { TypeChangeModalState } from "../types";
 import useLanguage from "../hooks/useLanguage";
 import BtnActions from "./BtnActions";
 
