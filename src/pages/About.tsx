@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useRef, ElementRef } from "react";
+import { useLocation } from "react-router-dom";
 import useLanguage from "../hooks/useLanguage"
 import LinkTopicList from "../components/LinkTopicList";
 
@@ -12,10 +13,35 @@ const SimpleTittle = ({ text }: { text: string }) => (
 
 export default function About() {
   const { t } = useLanguage()
+  const sectHire = useRef<ElementRef<"section">>(null)
+  const sectContact = useRef<ElementRef<"section">>(null)
+  const { hash } = useLocation()
 
   useEffect(() => {
     document.title = 'About - Filipe Dev'
   }, [])
+
+  useEffect(() => {
+    function goToSection(){
+      if(hash){
+        if(hash === "#hire" && sectHire.current){
+          window.scrollTo({
+            top: sectHire.current.offsetTop,
+            behavior: 'smooth'
+          })
+        }
+
+        if(hash === "#contact" && sectContact.current){
+          window.scrollTo({
+            top: sectContact.current.offsetTop,
+            behavior: 'smooth'
+          })
+        }
+      }
+    }
+  
+    goToSection()
+  }, [hash])
 
   return (
     <div className="max-w-[70%] mx-auto mb-24">
@@ -26,7 +52,7 @@ export default function About() {
           <SimplePText text={t('about.text.two')} />
         </hgroup>
       </section>
-      <section>
+      <section id="hire" ref={sectHire}>
         <SimpleTittle text={t('about.hire')} />
         <p className="text-black dark:text-white mb-4">{t('about.letsWork')}</p>
         <ul className="list-disc text-black dark:text-white ml-8">
@@ -41,7 +67,7 @@ export default function About() {
           <li>{t('about.listTopics.none')}</li>
         </ul>
       </section>
-      <section>
+      <section id="contact" ref={sectContact}>
         <SimpleTittle text={t('about.contact')} />
         <ul className="list-disc text-black dark:text-white ml-0 md:ml-8">
           <LinkTopicList text="Linkedin" linkPath="https://www.linkedin.com/in/filipemarquesdeveloper/" isBlank />

@@ -18,8 +18,8 @@ export default function Home() {
         <section className="">
           <h4 className="text-lg font-medium dark:text-white">{t('home.interest')}</h4>
           <ul className="ml-2 mb-8">
-            <LinkTopicList text={t('home.interestList.one')} linkPath="/" />
-            <LinkTopicList text={t('home.interestList.two')} linkPath="/" />
+            <LinkTopicList text={t('home.interestList.one')} linkPath="about#hire" />
+            <LinkTopicList text={t('home.interestList.two')} linkPath="about#contact" />
             <LinkTopicList text={t('home.interestList.three')} linkPath="projects/" />
             <LinkTopicList text={t('home.interestList.four')} linkPath="about/" />
           </ul>
